@@ -1,0 +1,31 @@
+﻿@model Guest
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-5">
+
+            <input class="form-control" asp-for="Name" placeholder="İsim" />
+            <span asp-validation-for="Name"></span>
+            <br />
+            <input class="form-control" asp-for="LastName" placeholder="Soyisim" />
+            <span asp-validation-for="LastName"></span>
+            <br />
+            <input  class="form-control" asp-for="PhoneNumber" placeholder="Telefon numarası (05..........)" />
+            <span asp-validation-for="PhoneNumber"></span>
+            <br />
+            <input class="form-control" asp-for="Email" placeholder="Email" />
+            <span asp-validation-for="Email"></span>
+            <br />
+            <input type="checkbox" name="WillCome" value="false" onchange="this.value=this.checked" /><label>Partiye katılacakmısınız ?</label>
+            <br />
+            <button type="submit" class="btn-success">Gönder</button>
+        </div>
+    </div>
+</form>
+
+
